@@ -41,7 +41,7 @@ class KategoriListFragment : Fragment() {
         ViewModel = ViewModelProvider(this).get(KategoriModel::class.java)
 
         ViewModel.refresh()
-        //Digunakan saat Reset Database
+        //DIGUNAKAN UNTUK MEMASUKAN DATA DEFAULT
 //        ViewModel.ClearKategori()
 //        addDefaultKategori()
 

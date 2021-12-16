@@ -45,7 +45,7 @@ class RecipeListFragment : Fragment() {
         ViewModel = ViewModelProvider(this).get(RecipeListModel::class.java)
         ViewModel.refresh()
 
-        //Digunakan saat Reset Database
+        //DIGUNAKAN UNTUK MEMASUKAN DATA DEFAULT
 //        ViewModel.ClearRecipe()
 //        addDefaultRecipe()
 

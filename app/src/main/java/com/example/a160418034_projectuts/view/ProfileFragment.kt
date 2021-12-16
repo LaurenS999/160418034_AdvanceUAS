@@ -45,7 +45,8 @@ class ProfileFragment : Fragment() {
         }
 
         ViewModel = ViewModelProvider(this).get(UserModel::class.java)
-        //Digunakan Saat Reset Database
+        //DIGUNAKAN UNTUK MEMASUKAN DATA DEFAULT
+//        ViewModel.nukeUser()
 //        addDeafultUser()
         ViewModel.FetchUser("Lauren", "123")
 

@@ -52,4 +52,11 @@ class UserModel(application: Application):AndroidViewModel(application),Coroutin
             db.userDao().insertAll(*list.toTypedArray())
         }
     }
+
+    fun nukeUser(){
+        launch{
+            val db = buildDb(getApplication())
+            db.userDao().nukeUser()
+        }
+    }
 }
