@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/item_home">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.a160418034_projectuts.view.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_recipeListFragment"
+            app:destination="@id/item_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRecipeFragment2"
+        android:name="com.example.a160418034_projectuts.view.AddRecipeFragment"
+        android:label="fragment_add_recipe"
+        tools:layout="@layout/fragment_add_recipe" />
+    <fragment
+        android:id="@+id/item_favorite"
+        android:name="com.example.a160418034_projectuts.view.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_RecipeDetilFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/item_kategori"
+        android:name="com.example.a160418034_projectuts.view.KategoriListFragment"
+        android:label="fragment_kategori_list"
+        tools:layout="@layout/fragment_kategori_list" >
+        <action
+            android:id="@+id/action_kategoriListFragment2_to_recipeListByKategoriFragment"
+            app:destination="@id/recipeListByKategoriFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/item_profile"
+        android:name="com.example.a160418034_projectuts.view.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_LoginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailFragment"
+        android:name="com.example.a160418034_projectuts.view.RecipeDetailFragment"
+        android:label="fragment_recipe_detail"
+        tools:layout="@layout/fragment_recipe_detail" >
+        <argument
+            android:name="Index"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/item_home"
+        android:name="com.example.a160418034_projectuts.view.RecipeListFragment"
+        android:label="fragment_recipe_list"
+        tools:layout="@layout/fragment_recipe_list" >
+        <action
+            android:id="@+id/action_recipeListFragment_to_addRecipeFragment2"
+            app:destination="@id/addRecipeFragment2" />
+        <action
+            android:id="@+id/action_recipeDetil"
+            app:destination="@id/recipeDetailFragment" />
+        <argument
+            android:name="Username"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="Kosong" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeListByKategoriFragment"
+        android:name="com.example.a160418034_projectuts.view.RecipeListByKategoriFragment"
+        android:label="fragment_recipe_list_by_kategori"
+        tools:layout="@layout/fragment_recipe_list_by_kategori" >
+        <argument
+            android:name="NamaKategori"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_RecipeDetailFragment"
+            app:destination="@id/recipeDetailFragment" />
+    </fragment>
+</navigation>
