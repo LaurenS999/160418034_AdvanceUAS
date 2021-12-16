@@ -69,7 +69,7 @@ class LoginFragment : Fragment(), ButtonLogin {
         }
         else
         {
-            Toast.makeText(v.context, "Data added", Toast.LENGTH_LONG).show()
+            //Toast.makeText(v.context, "Data added", Toast.LENGTH_LONG).show()
         }
     }
 }
